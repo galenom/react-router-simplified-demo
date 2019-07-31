@@ -18,6 +18,7 @@ const AppRouter: React.FC = ({ children }: { children?: ReactNode }) => {
             path="/"
             render={() => (<h1>Home</h1>)}
           />
+
           <Route
             /* PathA component will render additonal paths within it */
             // exact /* Should not use EXACT if there will be additional children paths within PathA component, e.g. /path-a/:customPath */
@@ -25,11 +26,13 @@ const AppRouter: React.FC = ({ children }: { children?: ReactNode }) => {
             path="/path-a" /* Should not use `${match.url}/` at root router level, only for relative paths in nested routes */
             component={PathA}
           />
+
           <Route
             exact
             path="/path-b"
             render={() => (<h1>Path B</h1>)}
           />
+
           <Route
             render={() => (<h1 style={{ color: 'red' }}>Route does not exist</h1>)}
           />

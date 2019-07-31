@@ -26,6 +26,7 @@ export const PathA = ({ match }: any): FunctionComponentElement<{}> => {
             return <PathADetail {...routerProps} />
           }}
         />
+
         {/* Catchall Route for `/path-a/*` */}
         <Route
           exact
